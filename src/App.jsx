@@ -1,5 +1,9 @@
+import { Studio } from "sanity";
+
+import sanityConfig from "./sanity/config";
+
 function App() {
-  return <h2>Personal blog</h2>;
+  return <Studio config={sanityConfig} />;
 }
 
 export default App;
