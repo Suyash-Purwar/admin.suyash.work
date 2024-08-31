@@ -56,8 +56,9 @@ export const Layout = defineType({
             defineField({
               name: "url",
               type: "url",
+              required: true,
               validation: (rule) =>
-                rule.required().uri({ schema: ["http", "https", "mailto"] }),
+                rule.uri({ scheme: ["http", "https", "mailto"] }),
             }),
           ],
         },
